@@ -1,0 +1,207 @@
+@import "./functions";
+@import "./variables";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $barlow;
+}
+.nav{
+    &__top{
+        margin: 0px 48px 0px 40px;
+        padding-top: 34px;
+        .top__links{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            &--img{
+                width: 170px;
+                height: auto;
+            }
+            .links{
+                    
+                a{
+                    color: $white;
+                    text-decoration: none;
+                    margin-left: 47px;
+                }
+                &__buttom{
+                    @include button($dark-blue !important,$white);
+                    font-weight: 700;
+                }
+                &__buttom:hover{
+                    @include button($white !important,$ligth-blue);
+                    font-weight: 700;
+                    cursor: grab;
+                }
+            } 
+        }
+        .top__text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: $white;
+            font-size: 56px;
+            &--title{
+                margin: 130px 0px 140px 0px;
+                font-family: $fraunces !important;
+            }
+            &--arrow{
+                height: 127px;
+                width: 50px;
+            }
+        }  
+    }
+    @include background-image('./sunnyside.png',100%,1000px);
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    height: 600px;
+    &__img1{
+        @include background-image('./egg.png',50%,600px)
+    }
+    &__img2{
+        @include background-image('./glass.png',50%,600px)
+    }
+    &__img3{
+        @include background-image('./cherry.png',50%,600px)
+    }
+    &__img4{
+        @include background-image('./orange.png',50%,600px)
+    }
+    &__img5{
+        @include background-image('./Bitmap.png',25%,600px)
+    }
+    &__img6{
+        @include background-image('./Bitmap1.png',25%,600px)
+    }
+    &__img7{
+        @include background-image('./Bitmap2.png',25%,600px)
+    }
+    &__img8{
+        @include background-image('./Bitmap3.png',25%,600px)
+    }
+    &__text{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 165px;
+        &--title{
+            font-family: $fraunces !important;
+            font-size: 40px;
+            color: $dark-blue;
+        }
+        &--information{
+            margin: 32px 110px 40px 0px;
+            line-height: 30px;
+            font-weight: 600;
+            font-size: 18px;
+            color: $gray;
+        }
+        &--yellow{
+            @include button-text($ligth-yellow,$fraunces);
+        }
+        &--yellow:hover{
+            @include button-text($yellow,$fraunces);
+        }
+        &--pink{
+            @include button-text($ligth-pink,$fraunces);
+        }
+        &--pink:hover{
+            @include button-text($pink,$fraunces);
+        }
+    }
+}
+
+.opinions{
+    padding: 160px;
+    &__title{
+        text-align: center;
+        font-size: 20px;
+        font-style: 900;
+        font-family: $fraunces !important;
+        letter-spacing: 5px;
+        color: $ligth-gray;    
+    }
+    .clients{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .client{
+            margin: 0px 15px 0px 15px;
+            text-align: center;
+            &__photo{
+                padding-top: 80px;
+            }
+            &__opinion{
+                margin: 58px 0px 70px 0px;
+                font-weight: 600;
+                font-size: 18px;
+                color: $dark-gray;
+            }
+            &__name{
+                font-family: $fraunces !important;
+                font-size: 18px;
+                color: $dark-blue;
+            }
+            &__profession{
+                padding-top: 10px;
+                color: $ligth-gray;
+            }
+        }
+    }
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $ligth-green;
+    height: 350px;
+    &__options{
+        margin-top: 40px;
+        &--green{
+            color: $green;
+            text-decoration: none;
+            padding: 0px 28px 0px 28px;
+        }
+        &--green:hover{
+            color: $white;
+            cursor: grab;
+        }
+    }
+    &__socialMedia{
+        display: flex;
+        margin-top: 80px;
+        &--facebook{
+            @include social-media-icon('./socialmedia2.svg');
+        }
+        &--facebook:hover{
+            @include social-media-icon('./socialmediawhite2.svg');
+        }
+        &--instagram{
+            @include social-media-icon('./socialmedia1.svg');
+        }
+        &--instagram:hover{
+            @include social-media-icon('./socialmediawhite1.svg');
+        }
+        &--twitter{
+            @include social-media-icon('./socialmedia3.svg');
+        }
+        &--twitter:hover{
+            @include social-media-icon('./socialmediawhite3.svg');
+        }
+        &--pinterest{
+            @include social-media-icon('./socialmedia4.svg');
+        }
+        &--pinterest:hover{
+            @include social-media-icon('./socialmediawhite4.svg');
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@mixin button($color,$background){
+    height: 45px;
+    width: 140px;
+    border-radius: 50px;
+    text-align: center;
+    color:$color;
+    font-family: $fraunces !important;
+    background-color: $background;
+    margin-top: -10px;
+    padding: 10px;
+}
+
+@mixin button-text($color,$font-family){
+    color: $dark-blue;
+    font-family: $font-family;
+    cursor: grab;
+    border-bottom: 8px solid $color;
+    // padding: 1px;
+}
+
+@mixin background-image($url,$width,$heigth){
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: $width;
+    height: $heigth;
+}
+
+@mixin social-media-icon($url){
+    height: 20px;
+    width: 20px;
+    background-image: url($url);
+    background-repeat: no-repeat;
+    margin-right: 28px;
+    cursor: grab;
+}
+
+
+
