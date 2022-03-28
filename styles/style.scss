@@ -8,7 +8,7 @@
     font-family: $barlow;
 }
 .nav{
-    &__top{
+    &__top{  
         margin: 0px 48px 0px 40px;
         padding-top: 34px;
         .top__links{
@@ -18,9 +18,12 @@
             &--img{
                 width: 170px;
                 height: auto;
+                @media screen and (max-width:600px) {
+                    width: 123px;
+                    height: auto;
+                }
             }
             .links{
-                    
                 a{
                     color: $white;
                     text-decoration: none;
@@ -38,9 +41,10 @@
             } 
         }
         .top__text{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            // display: flex;
+            text-align: center;
+            // flex-direction: column;
+            // align-items: center;
             color: $white;
             font-size: 56px;
             &--title{
@@ -50,40 +54,92 @@
             &--arrow{
                 height: 127px;
                 width: 50px;
+                
+            }
+            @media screen and (max-width:600px){
+                &--title{
+                    margin: 88px 0px 52px 0px;
+                }
+                &--arrow{
+                    height: 107px;
+                    width: 30px;
+                }
             }
         }  
     }
-    @include background-image('./sunnyside.png',100%,1000px);
+    @include background-image('./sunnyside.png',100%,100%,1000px,538px);
+    @media screen and (max-width: 600px) {
+        // @include background-image('./sunnyside.png',100%,);
+        .top__text{
+            font-size: 40px;
+        }
+    }
 }
 
 .container{
     display: flex;
-    flex-direction: row;
     width:100%;
     height: 600px;
+    @media screen and (max-width: 600px){
+        flex-direction: column;
+        height: 750px;
+    }
     &__img1{
-        @include background-image('./egg.png',50%,600px)
+        @include background-image('./egg.png',50%,100%,600px,600px);
     }
     &__img2{
-        @include background-image('./glass.png',50%,600px)
+        @include background-image('./glass.png',50%,100%,600px,600px)
     }
     &__img3{
-        @include background-image('./cherry.png',50%,600px)
+        @include background-image('./cherry.png',50%,100%,600px,600px);
+        @include center-content-column;
+        .text{
+            text-align: center;
+            &__title{
+                font-family: $fraunces !important;
+                color: $dark-green;
+                font-size: 28px;
+            }
+            &__information{
+                padding: 27px 0px 60px 0px;
+                color: $p-green;
+                line-height: 27px;
+                font-size: 16px;
+            }
+            @media screen and (max-width: 600px){
+
+            }
+        }
     }
     &__img4{
-        @include background-image('./orange.png',50%,600px)
+        @include background-image('./orange.png',50%,100%,600px,600px);
+        @include center-content-column;
+        .text{
+            text-align: center;
+            &__title{
+                font-family: $fraunces !important;
+                color: $t-blue;
+                font-size: 28px;
+            }
+            &__information{
+                padding: 27px 0px 60px 0px;
+                color: $p-blue;
+                line-height: 27px;
+                font-size: 16px;
+            }
+        }
     }
     &__img5{
-        @include background-image('./Bitmap.png',25%,600px)
+        @include background-image('./Bitmap.png',25%,25%,600px,188px)
     }
     &__img6{
-        @include background-image('./Bitmap1.png',25%,600px)
+        @include background-image('./Bitmap1.png',25%,25%,600px,188px)
     }
     &__img7{
-        @include background-image('./Bitmap2.png',25%,600px)
+        @include background-image('./Bitmap2.png',25%,25%,600px,188px)
     }
     &__img8{
-        @include background-image('./Bitmap3.png',25%,600px)
+        @include background-image('./Bitmap3.png',25%,25%,600px,188px)
     }
     &__text{
         width: 50%;
@@ -102,6 +158,19 @@
             font-weight: 600;
             font-size: 18px;
             color: $gray;
+        }
+        @media screen and (max-width:600px) {
+            text-align: center;
+            padding-left: 0;
+            // position: relative;
+            height: 437px;
+            width: 100%;
+            &--title{
+                font-size: 32px;
+            }
+            &--information{
+                margin: 0 auto;
+            }
         }
         &--yellow{
             @include button-text($ligth-yellow,$fraunces);
@@ -158,10 +227,7 @@
 }
 
 .footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    @include center-content-column;
     background-color: $ligth-green;
     height: 350px;
     &__options{

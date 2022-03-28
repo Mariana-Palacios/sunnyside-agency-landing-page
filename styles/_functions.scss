@@ -18,13 +18,19 @@
     // padding: 1px;
 }
 
-@mixin background-image($url,$width,$heigth){
+@mixin background-image($url,$width,$maxWidth,$heigth, $maxHeigth){
     background-image: url($url);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: $width;
     height: $heigth;
+    // position: relative;
+    // // modificacion
+    @media screen and (max-width: 600px){
+        height: $maxHeigth;
+        width: $maxWidth;
+    }
 }
 
 @mixin social-media-icon($url){
@@ -36,5 +42,9 @@
     cursor: grab;
 }
 
-
-
+@mixin center-content-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
