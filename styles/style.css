@@ -274,7 +274,7 @@
 @media screen and (max-width: 600px) {
   .container__text {
     text-align: center;
-    padding: 0px 0px 64px 0px;
+    padding: 0px 24px 64px 24px;
     height: 437px;
     width: 100%;
   }
@@ -395,6 +395,7 @@
   margin: 58px 0px 70px 0px;
   font-weight: 600;
   font-size: 18px;
+  line-height: 32px;
   color: #5B636D;
 }
 .opinions .clients .client__name {
