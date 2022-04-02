@@ -11,14 +11,13 @@
     &__burger{
         position: absolute;
         transform: translate(0,-140%);
-        margin-top: 120px;
         margin-left: auto;
         margin-right: auto;
         left: 0;
         right: 0;
-        // text-align: center;
         @media screen and (max-width:600px){
-            transform: translate(0,-140%);
+            // transform: translate(0,0%);
+            padding-top: 110px;
         }
     }
     &__burger.is-active{
@@ -27,18 +26,22 @@
     &__top{
         margin: 0px 48px 0px 40px;
         padding-top: 34px;
-        .top__links{
-            display: flex;
-            justify-content: space-between;
             &--img{
+                position:absolute;
+                left: 0;
+                padding-left:40px; 
                 width: 170px;
                 height: auto;
                 @media screen and (max-width:600px) {
                     width: 123px;
                     height: auto;
+                    padding-left:24px; 
                 }
             }
             .links{
+                position: absolute;
+                right: 0;
+                margin-right: 40px;
                 a{
                     color: $white;
                     text-decoration: none;
@@ -54,16 +57,20 @@
                     cursor: grab;
                 }
                 @media screen and (max-width:600px){
-                    transform: translate(0,-200%);
+                    transform: translate(0,-220%);
                 }
             }
             .links.is-active{
                 transform: translate(0,0%);
+                position: absolute;
+                margin-left: auto;
+                margin-right: auto;
+                left: 0;
+                right: 0;
+                padding-top: 120px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                position: absolute;
-                margin: 120px 0px 0px 50px;
                 a{
                     margin: 20px 32px;
                     font-weight: 600;
@@ -74,7 +81,6 @@
                     margin-top: 20px;
                 }
             } 
-        }
         // burger
         .hamburger-box .hamburger-inner,
         .hamburger-box .hamburger-inner::before,
@@ -89,16 +95,16 @@
                 @media screen and (max-width:600px){
                     // margin-left: 250px;
                     top: 0;
-                    padding: 40px 20px 0px 0px;
+                    padding: 30px 20px 0px 0px;
                     transform: translate(0,0%);
                 }
         }
         .top__text{
             text-align: center;
             color: $white;
-            font-size: 56px;
+            font-size: 60px;
             &--title{
-                margin: 130px 0px 140px 0px;
+                margin: 160px 0px 140px 0px;
                 font-family: $fraunces !important;
             }
             &--arrow{
@@ -108,7 +114,8 @@
             }
             @media screen and (max-width:600px){
                 &--title{
-                    margin: 30px 0px 52px 0px;
+                    margin: 60px 0px 35px 0px;
+                    font-size: 50px;
                 }
                 &--arrow{
                     height: 107px;
@@ -116,7 +123,7 @@
                 }
             }
             .top__text--title.is-active{
-                margin: 80px 0px 52px 0px;
+                margin: 90px 0px 52px 0px;
             }  
         }
     }

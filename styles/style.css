@@ -18,7 +18,6 @@
 .nav__burger {
   position: absolute;
   transform: translate(0, -140%);
-  margin-top: 120px;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -26,7 +25,7 @@
 }
 @media screen and (max-width: 600px) {
   .nav__burger {
-    transform: translate(0, -140%);
+    padding-top: 110px;
   }
 }
 .nav__burger.is-active {
@@ -36,26 +35,31 @@
   margin: 0px 48px 0px 40px;
   padding-top: 34px;
 }
-.nav__top .top__links {
-  display: flex;
-  justify-content: space-between;
-}
-.nav__top .top__links--img {
+.nav__top--img {
+  position: absolute;
+  left: 0;
+  padding-left: 40px;
   width: 170px;
   height: auto;
 }
 @media screen and (max-width: 600px) {
-  .nav__top .top__links--img {
+  .nav__top--img {
     width: 123px;
     height: auto;
+    padding-left: 24px;
   }
 }
-.nav__top .top__links .links a {
+.nav__top .links {
+  position: absolute;
+  right: 0;
+  margin-right: 40px;
+}
+.nav__top .links a {
   color: #fff;
   text-decoration: none;
   margin-left: 47px;
 }
-.nav__top .top__links .links__buttom {
+.nav__top .links__buttom {
   height: 45px;
   width: 140px;
   border-radius: 50px;
@@ -67,7 +71,7 @@
   padding: 10px;
   font-weight: 700;
 }
-.nav__top .top__links .links__buttom:hover {
+.nav__top .links__buttom:hover {
   height: 45px;
   width: 140px;
   border-radius: 50px;
@@ -82,24 +86,28 @@
   cursor: grab;
 }
 @media screen and (max-width: 600px) {
-  .nav__top .top__links .links {
-    transform: translate(0, -200%);
+  .nav__top .links {
+    transform: translate(0, -220%);
   }
 }
-.nav__top .top__links .links.is-active {
+.nav__top .links.is-active {
   transform: translate(0, 0%);
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  padding-top: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
-  margin: 120px 0px 0px 50px;
 }
-.nav__top .top__links .links.is-active a {
+.nav__top .links.is-active a {
   margin: 20px 32px;
   font-weight: 600;
   color: #808397;
 }
-.nav__top .top__links .links.is-active .links__buttom {
+.nav__top .links.is-active .links__buttom {
   height: 45px;
   width: 140px;
   border-radius: 50px;
@@ -126,17 +134,17 @@
 @media screen and (max-width: 600px) {
   .nav__top #btn__burger {
     top: 0;
-    padding: 40px 20px 0px 0px;
+    padding: 30px 20px 0px 0px;
     transform: translate(0, 0%);
   }
 }
 .nav__top .top__text {
   text-align: center;
   color: #fff;
-  font-size: 56px;
+  font-size: 60px;
 }
 .nav__top .top__text--title {
-  margin: 130px 0px 140px 0px;
+  margin: 160px 0px 140px 0px;
   font-family: "Fraunces", serif !important;
 }
 .nav__top .top__text--arrow {
@@ -145,7 +153,8 @@
 }
 @media screen and (max-width: 600px) {
   .nav__top .top__text--title {
-    margin: 30px 0px 52px 0px;
+    margin: 60px 0px 35px 0px;
+    font-size: 50px;
   }
   .nav__top .top__text--arrow {
     height: 107px;
@@ -153,7 +162,7 @@
   }
 }
 .nav__top .top__text .top__text--title.is-active {
-  margin: 80px 0px 52px 0px;
+  margin: 90px 0px 52px 0px;
 }
 @media screen and (max-width: 600px) {
   .nav {
